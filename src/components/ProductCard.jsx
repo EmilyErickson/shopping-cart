@@ -49,7 +49,6 @@ function ProductCard({ item, addToCart, cartItems, removeFromCart}) {
   function handleChange(e, product) {
     e.preventDefault()
     if(e.target.value > quantity) {
-      console.log(e.target.value)
       let newQuantity = parseInt(e.target.value)
       setQuantity(() => {
         addToCart(product, newQuantity)
