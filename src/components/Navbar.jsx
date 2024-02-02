@@ -1,10 +1,18 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// { cartItems }
 
-function Navbar() {
-//   const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
-    let totalItems = 3
+function Navbar({cartItems}) {
+  let totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+  function ItemNumber() {
+    if (cartItems.length === 0) {
+      return (
+        <div></div>
+      )
+    } else {
+    return (
+      <span className="cart-count">{totalItems}</span>
+    )}
+  }
 
   return (
     <nav className="navbar">
@@ -12,7 +20,7 @@ function Navbar() {
         <Link to="/">-Home- </Link>
         <Link to="/shop">-Shop-</Link>
         <Link to="/cart">
-          Cart <span className="cart-count">{totalItems}</span>
+          Cart <ItemNumber />
         </Link>
       </div>
     </nav>
