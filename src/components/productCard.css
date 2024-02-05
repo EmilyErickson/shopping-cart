@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@0;1&family=Merriweather&family=Protest+Riot&display=swap');
+
+body {
+    background-color: #fafafa;
+}
+
+.product-card {
+    background-color: white;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 12px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    padding: 5px;
+    box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.49);
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    text-align: center;
+    width: 35px;
+    height: 18px;
+    font-size: 18px;
+}
+
+img {
+    height: 200px;
+    object-fit: contain;
+    width: 200px;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 5px 0 0 0;
+    text-align: center;
+}
+.price {
+    margin: 5px;
+}
+
+button, input {
+    background: none;
+    margin: 0;
+    border-radius: 6px;
+    border: 1px solid rgb(98, 90, 2);
+    font-family: 'Crimson Text', sans-serif;
+    font-family: 'Crimson Text', sans-serif;
+    font-weight: 600;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.354);
+}
+
+.add-to-cart, .remove-item{
+    background-color: rgba(230, 230, 250, 0.405);
+    padding: 5px 5px;
+    font-weight: 600;
+    transition: font-size .2s ease-in-out;
+}
+
+.add-to-cart:hover, .remove-item:hover {
+    font-size: 14px;
+}
+
+.remove-item {
+    margin-top: 5px;
+}
+
+.edit-quantity {
+    border: none;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}

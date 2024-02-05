@@ -2,6 +2,7 @@ import "../App.css"
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { formatCurrency } from "../utilities/formatCurrency";
+import "./productCard.css"
 
 function ProductCard({ item, addToCart, cartItems, removeFromCart}) {
 
@@ -12,15 +13,17 @@ function ProductCard({ item, addToCart, cartItems, removeFromCart}) {
     if(cartItems.find((cartItem) => cartItem.id === product.id)) {
       const existingItem = cartItems.find((cartItem) => cartItem.id === product.id);
       return (
-    <div>
-      <button onClick={(e) => (handleIncrement(e, product))}>+</button>
-      <div><input type="text" defaultValue={existingItem.quantity} onChange={(e) => handleChange(e, product)}/>in Cart</div>
-      <button onClick={(e) => (handleDecrement(e, product))}>-</button>
-      <button onClick={() => (handleRemove())}>Remove</button>
-    </div>) }
+    <>
+      <div className="quantity-controls">
+      <button className="edit-quantity" onClick={(e) => (handleIncrement(e, product))}>+</button>
+      <input type="text" defaultValue={existingItem.quantity} onChange={(e) => handleChange(e, product)}/>
+      <button className="edit-quantity" onClick={(e) => (handleDecrement(e, product))}>-</button>
+      </div>
+      <button className="remove-item" onClick={() => (handleRemove())}>Remove</button>
+    </>) }
     else {
       return (
-        <button onClick={(e) => (handleIncrement(e, product))}>Add To Cart</button>
+        <button className="add-to-cart" onClick={(e) => (handleIncrement(e, product))}>Add To Cart</button>
       )
     }
 
@@ -68,12 +71,13 @@ function ProductCard({ item, addToCart, cartItems, removeFromCart}) {
 
   return (
     <div className="product-card">
-      <h3>{product.title}</h3>
-      <p>Price: {formatCurrency(product.price)}</p>
-      <img src={product.image} alt={product.title} />
-      <div className="quantity-controls">
+      <div className="image-container">
+      <img src={product.image} alt={product.title} /></div>
+      <h3 className="title">{product.title}</h3>
+      <p className="price">Price: {formatCurrency(product.price)}</p>
+      <>
         <ItemInCart />
-      </div>
+      </>
     </div>
   );
 }

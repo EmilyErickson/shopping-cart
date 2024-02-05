@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #f3f4f6;
+    height: 50px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.49);
+}
+
+.nav-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.nav-link {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #1e293b;
+    transition: font-size 0.3s ease-in-out;
+}
+.nav-link:hover {
+    font-size: 22px;
+}
+
+.cart {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    justify-self: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    width: 25px;
+    height: 25px;
+    filter: invert(12%) sepia(50%) saturate(527%) hue-rotate(178deg) brightness(95%) contrast(91%);
+    transition: height 0.2s ease-in-out;
+}
+
+svg:hover {
+    width: 27px;
+    height: 27px;
+}
+
+.cart-count {
+    color: #012121;
+    position: absolute;
+    top: -8px;
+    right: -2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 90px;
+    border: .5px solid #a1a1aa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: -1px;
+    font-size: 12px;
+    z-index: -1;
+}
