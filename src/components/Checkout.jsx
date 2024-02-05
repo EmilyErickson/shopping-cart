@@ -10,7 +10,6 @@ function Checkout({cartItems, setCartItems}) {
     alert("This is a demo site. You can't actually buy anything.");
   }
 
-console.log(cartItems)
   return (
     <div className='checkout-page'>
       <h2 className='checkout-header'>Checkout</h2>

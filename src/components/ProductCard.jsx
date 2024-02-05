@@ -66,7 +66,6 @@ function ProductCard({ item, addToCart, cartItems, removeFromCart}) {
   function handleRemove() {
     removeFromCart(product)
     setQuantity(0)
-    console.log(product)
   }
 
   return (

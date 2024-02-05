@@ -4,6 +4,7 @@ import "./navbar.css"
 
 function Navbar({cartItems}) {
   let totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+  
   function ItemNumber() {
     if (cartItems.length === 0) {
       return (

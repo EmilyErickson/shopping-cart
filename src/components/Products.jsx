@@ -9,7 +9,6 @@ const FetchProducts = () => {
           .then((response) => {setData(response)})
           .catch((error) => console.error(error));
       }, []);
-    
       return data
 }
 

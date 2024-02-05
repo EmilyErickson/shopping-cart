@@ -12,7 +12,6 @@ function Cart({cartItems, removeFromCart}) {
         )
     }
 
-
   return (
     <div className='cart-page'>
       <h2 className='cart-header'>Items in Cart</h2>
