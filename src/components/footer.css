@@ -1,0 +1,13 @@
+.footer {
+    background-color: #475569;
+    width: 100vw;
+    color: #f8fafc;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credits > a {
+    color: #f1f5f9;
+}
