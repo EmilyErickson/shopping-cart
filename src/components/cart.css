@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     display: grid;
-    height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
 }
 
 .cart-header {
