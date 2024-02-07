@@ -7,6 +7,7 @@ import Cart from './components/Cart';
 import { FetchProducts } from './components/Products';
 import Checkout from './components/Checkout';
 import {ErrorPage} from "./pages/ErrorPage";
+import { Footer } from './components/Footer';
 
 function App() {
   let productData = FetchProducts()
@@ -52,6 +53,7 @@ function App() {
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
       </div>
+      <Footer />
     </div>
   )
 }
