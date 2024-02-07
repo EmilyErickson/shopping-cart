@@ -18,7 +18,7 @@ function Cart({cartItems, removeFromCart}) {
       {cartItems === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
-        <div>
+        <div className='cart-items'>
           {cartItems.map((cartItem) => (
             <div key={cartItem.id} className="cart-item">
               <img src={cartItem.image} alt={cartItem.title} />
