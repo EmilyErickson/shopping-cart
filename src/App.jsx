@@ -37,19 +37,18 @@ function App() {
   function removeFromCart(product) {
       let newCartItems = cartItems.filter(item => item.id !== product.id);
       setCartItems(newCartItems)
-      console.log(newCartItems)
   }
 
 
   return (
     <div>
-      <Navbar />
+      <Navbar cartItems={cartItems}/>
       <div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage productData={productData} addToCart={addToCart} cartItems={cartItems} removeFromCart={removeFromCart}/>} />
         <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart}/>} />
-        <Route path="/checkout" element={<Checkout cartItems={cartItems} />} />
+        <Route path="/checkout" element={<Checkout cartItems={cartItems} setCartItems={setCartItems}/>} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
       </div>
